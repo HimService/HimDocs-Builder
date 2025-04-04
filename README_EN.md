@@ -20,6 +20,8 @@ HimDocs-Builder is a simple yet powerful documentation site generator built usin
 You can preview the latest version of HimDocs-Builder here:  
 https://himservice-docs.himserver.com/
 
+(I’m very sorry, but the website currently only has a Chinese README.md. However, you can download the project yourself, and we provide English versions of the files.)
+
 ## Installation
 
 ### Requirements
