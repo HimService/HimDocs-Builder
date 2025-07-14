@@ -4,7 +4,10 @@
 
 # HimDocs-Builder
 
-## Introduction
+You can preview the latest version of HimDocs-Builder here:
+https://himservice-docs.himserver.com/
+
+## Overview
 
 HimDocs-Builder is a simple yet powerful documentation site generator built using HTML, CSS, and JavaScript. It supports a dynamic sidebar, table of contents (TOC), theme switching (light/dark mode), progress bar, and Markdown content rendering. Users can define the site structure and content by modifying the `pages.json` configuration file, with support for customizing footer copyright information.
 
@@ -16,11 +19,6 @@ HimDocs-Builder is a simple yet powerful documentation site generator built usin
 - **Progress Bar**: Displays the scroll progress of the content area.
 - **Footer Animation**: The footer pops up when scrolling past the bottom of the content.
 - **Customizability**: Supports custom titles, footer copyright text, and menu icons.
-
-You can preview the latest version of HimDocs-Builder here:  
-https://himservice-docs.himserver.com/
-
-(I’m very sorry, but the website currently only has a Chinese README.md. However, you can download the project yourself, and we provide English versions of the files.)
 
 ## Installation
 
@@ -36,7 +34,6 @@ https://himservice-docs.himserver.com/
      - `pages.json`: Site configuration and page settings.
      - `content/`: Directory for storing Markdown files (e.g., `page1.md`).
      - `server.py`: Server startup and port configuration.
-     - `assets/`: You can place your logo here, named as a `.png` file (e.g., `logo.png`).
 2. **Set Up Content**
    - Create Markdown files in the `content/` directory, for example:
      ```
@@ -44,19 +41,13 @@ https://himservice-docs.himserver.com/
      This is my first documentation page.
      ```
      The filename should correspond to the `path` in `pages.json` (e.g., `page1.md`).
-3. **Configure Startup Port**
-   - Edit `server.py`:
-     ```bash
-     # Define server port
-     PORT = 8000
-     ```
-     Change `PORT = 8000` to your desired port.
-4. **Start the Server**
+
+3. **Start the Server**
    - Run the following in the project directory:
      ```bash
      py server.py
      ```
-   - The console will display `Server running at http://localhost:8000`.
+   - The console will display `Server running at http://localhost:8000`
    - Open `http://localhost:8000` in your browser.
 
 ## Usage
@@ -69,7 +60,7 @@ https://himservice-docs.himserver.com/
 - **Footer**: Scroll past the bottom of the content to trigger the footer pop-up.
 
 ### Example Markdown Content
-In `content/page1.md`:
+In `content/example/page1.md`:
 ```
 # Page One
 This is my documentation content.
@@ -77,11 +68,14 @@ This is my documentation content.
 ## Subsection
 - Item 1
 - Item 2
+
+`BOT_TOKEN`: Please obtain from [Discord Developer Portal](https://discord.com/developers/docs/intro).
 ```
 
 After rendering:
 - Headings and lists are displayed correctly.
-- Links are rendered as clickable hyperlinks.
+- `` `BOT_TOKEN` `` is displayed in code style (highlighted effect).
+- Links are displayed as clickable hyperlinks.
 
 ## Customization Options
 
@@ -94,7 +88,7 @@ The configuration file is located at `pages.json`, with the following structure:
     "sidebar": [
         {
             "name": "Project A",
-            "path": "page1",
+            "path": "example/page1", // Now you can create folders in the content folder to categorize documents
             "icon": "🏠",
             "children": [
                 {
@@ -138,7 +132,9 @@ Edit `style.css`:
 ## Development and Contribution
 
 ### Reporting Issues
-If you encounter a bug or have a feature suggestion, please create an Issue on GitHub with a detailed description and reproduction steps.
+
+If you encounter a bug or have a feature suggestion, please create an Issue on GitHub, providing a detailed description and reproduction steps.
 
 ## License
+
 Please read the `LICENSE` file.
